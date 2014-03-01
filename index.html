@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A ride sharing service for everyday life. Where do you want to go today?">
+
+    <title>Ride Shotty. Ride sharing made easy.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Add custom CSS here -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+
+    <div class="intro-header">
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12">
+                        <div class="intro-message">
+                            <h1><img src="img/logo.png" alt="Shotty Logo" class="logo"></h1>
+                            <hr class="intro-divider">
+                            <h3>Rides On Your Time</h3>
+                            <form class="form-inline pad-form" role="form" id="forms">
+                              <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                <input type="email" class="form-control form-email" placeholder="email">
+                              </div>
+                              <a role="button" class="btn btn-success btn-lg" id="signup">Sign Up!</a>
+                            </form>
+                            <div class="alert alert-success hidden" id="thanks">It's great to have your aboard. Click below for our sweet app!</div>
+                            <a class="btn btn-default btn-lg" href="#" data-icon="&#xe001;">iOS</a>
+                            <a class="btn btn-default btn-lg" href="#" data-icon="&#xe002;">Android</a>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <div class="content-section-a" id="about">
+
+        <div class="container-fluid">
+            <h1 class="text-center why">Why Shotty?</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="text-center icon"><span class="glyphicon glyphicon-user"></span></div>
+                    <h2 class="section-heading text-center">Riders</h2>
+                    <p class="lead">Tell us when and where you want to go and we'll find you a driver with a price you want to pay.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center icon"><span class="glyphicon glyphicon-road"></span></div>
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading text-center">Drivers</h2>
+                    <p class="lead">Going somewhere? Got empty seats? Sign up to be a driver, where you can set your own price.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center icon"><span class="glyphicon glyphicon-ok"></span></div>
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading text-center">Safety First</h2>
+                    <p class="lead">All users are authenticated through facebook. All drivers and passengers are reviewed.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+        <footer class="text-center">Shotty beta &#65073; the Shotty team &hearts; &#65073; &copy;2014</footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script type="text/javascript">$('a, label, button, input[type="button"]').fasttap();</script>
+    <script type="text/javascript">
+         $(document).ready( function() {
+            /* Check width on page load*/
+            if ( $(window).width() < 767) {
+             $('#signup').addClass('btn-block');
+            }
+            else {}
+         });
+
+         $(window).resize(function() {
+            /*If browser resized, check width again */
+            if ($(window).width() < 767) {
+             $('#signup').addClass('btn-block');
+            }
+            else {$('#signup').removeClass('btn-block');}
+         });
+
+        function thanks() {
+            $("#thanks").fadeIn("slow").removeClass("hidden");
+            $("#forms").addClass("hidden");
+        };
+
+
+         $("#signup").click(function(){
+            thanks();
+        });
+    </script>
+
+</body>
+
+</html>
